@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8FBA8ED71A763DEC00977D90 /* ScoresList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FBA8ED61A763DEC00977D90 /* ScoresList.m */; };
+		8FBA8ED91A76D09400977D90 /* pushicono200.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FBA8ED81A76D09400977D90 /* pushicono200.png */; };
 		8FC328041A6DF0CE0086B81C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC328031A6DF0CE0086B81C /* main.m */; };
 		8FC328071A6DF0CE0086B81C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC328061A6DF0CE0086B81C /* AppDelegate.m */; };
 		8FC3280A1A6DF0CE0086B81C /* Home.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC328091A6DF0CE0086B81C /* Home.m */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		8FBA8ED51A763DEC00977D90 /* ScoresList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoresList.h; sourceTree = "<group>"; };
 		8FBA8ED61A763DEC00977D90 /* ScoresList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoresList.m; sourceTree = "<group>"; };
+		8FBA8ED81A76D09400977D90 /* pushicono200.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pushicono200.png; sourceTree = "<group>"; };
 		8FC327FE1A6DF0CE0086B81C /* PushGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PushGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FC328021A6DF0CE0086B81C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FC328031A6DF0CE0086B81C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 		8FC327F51A6DF0CE0086B81C = {
 			isa = PBXGroup;
 			children = (
+				8FBA8ED81A76D09400977D90 /* pushicono200.png */,
 				8FBA8ED41A763DA500977D90 /* Customize */,
 				8FBA8ED31A763D9400977D90 /* Database */,
 				8FF13D581A7100A500760183 /* pushdata.sql */,
@@ -237,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FBA8ED91A76D09400977D90 /* pushicono200.png in Resources */,
 				8FF13D591A7100A500760183 /* pushdata.sql in Resources */,
 				8FC3280D1A6DF0CE0086B81C /* Main.storyboard in Resources */,
 				8FC328121A6DF0CE0086B81C /* LaunchScreen.xib in Resources */,
