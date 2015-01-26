@@ -10,8 +10,10 @@
 #import "ScoresList.h"
 
 NSMutableArray *datos;
+NSTimer *myTimer;
 int contador;
 int pos;
+int total;
 
 @interface Resultados ()
 
@@ -44,17 +46,44 @@ int pos;
     [self performSegueWithIdentifier:@"sagaVolver" sender:self];
 }
 
+- (void)animaList{
+    int lastRowNumber = (int)[self.tblMain numberOfRowsInSection:0] - (total-pos);
+    NSIndexPath* ip = [NSIndexPath indexPathForRow:lastRowNumber inSection:0];
+    [self.tblMain scrollToRowAtIndexPath:ip atScrollPosition:UITableViewScrollPositionTop animated:YES];
+    UITableViewCell *celda = [self.tblMain cellForRowAtIndexPath:ip];
+    celda.backgroundColor = [UIColor colorWithRed:246.0/255.0 green:95.0/255.0 blue:22.0/255.0 alpha:1.0];
+    [myTimer invalidate];
+    myTimer = nil;
+}
+
 - (void)initController{
-    
+    contador = 0;
     datos = [[DBManager getSharedInstance]listar];
     NSLog(@"Valor insertado: %d",valorInsertado);
     //NSLog(@"%@", datos);
-    //[self.tblMain scrollToRowAtIndexPath:10 atScrollPosition:UITableViewScrollPositionNone  animated:YES];
-    //for (NSString *string in datos) { NSLog(@"%@", string); }
-    //[self.tblMain reloadData];
-    //[self.tblMain reloadData];
+    
+    for(NSArray *st in datos) {
+        NSLog(@"%@",st);
+        if([[st objectAtIndex:0] integerValue] == valorInsertado){
+            pos = contador;
+        }
+        contador++;
+    }
+    total = (int)[datos count];
+    
+    NSLog(@"Valor posicion: %d",pos);
+    
+    
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    [self.tblMain scrollToRowAtIndexPath:indexPath
+                         atScrollPosition:UITableViewScrollPositionTop
+                                 animated:YES];
+    myTimer = [NSTimer scheduledTimerWithTimeInterval:0.3 target:self selector:@selector(animaList) userInfo:nil repeats:NO];
     
     }
+
+
 /**********************************************************************************************
  Table Functions
  **********************************************************************************************/
@@ -65,10 +94,8 @@ int pos;
 //-------------------------------------------------------------------------------
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    
-
+    total = (int)[datos count];
     return [datos count];
-    
 }
 //-------------------------------------------------------------------------------
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -78,13 +105,9 @@ int pos;
 //-------------------------------------------------------------------------------
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //NSLog(@"ScoresList");
-    
     static NSString *CellIdentifier = @"ScoresList";
-    
     ScoresList *cell = (ScoresList *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil)
-    {
+    if (cell == nil){
         cell = [[ScoresList alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
@@ -92,10 +115,6 @@ int pos;
     contador++;
     cell.score.text = [dato objectAtIndex:0];
     cell.fechahora.text = [dato objectAtIndex:1];
-    if([[dato objectAtIndex:0] integerValue] == valorInsertado){
-        cell.backgroundColor = [UIColor colorWithRed:.8 green:.8 blue:1 alpha:1];
-        pos = contador;
-    }
     return cell;
 }
 
@@ -103,15 +122,6 @@ int pos;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-}
-
--(void) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if([indexPath row] == ((NSIndexPath*)[[tableView indexPathsForVisibleRows] lastObject]).row){
-        int total = 60*pos;
-        NSLog(@"Valor scroll: %d",total);
-        [self.tblMain setContentOffset:CGPointMake(0, total) animated:YES];
-    }
 }
 
 
