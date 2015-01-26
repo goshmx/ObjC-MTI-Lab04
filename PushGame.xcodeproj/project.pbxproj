@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8FBA8ED71A763DEC00977D90 /* ScoresList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FBA8ED61A763DEC00977D90 /* ScoresList.m */; };
 		8FC328041A6DF0CE0086B81C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC328031A6DF0CE0086B81C /* main.m */; };
 		8FC328071A6DF0CE0086B81C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC328061A6DF0CE0086B81C /* AppDelegate.m */; };
 		8FC3280A1A6DF0CE0086B81C /* Home.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC328091A6DF0CE0086B81C /* Home.m */; };
@@ -14,6 +15,10 @@
 		8FC3280F1A6DF0CE0086B81C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FC3280E1A6DF0CE0086B81C /* Images.xcassets */; };
 		8FC328121A6DF0CE0086B81C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FC328101A6DF0CE0086B81C /* LaunchScreen.xib */; };
 		8FC3281E1A6DF0CE0086B81C /* PushGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC3281D1A6DF0CE0086B81C /* PushGameTests.m */; };
+		8FF13D4E1A70778300760183 /* Resultados.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF13D4D1A70778300760183 /* Resultados.m */; };
+		8FF13D501A70872B00760183 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF13D4F1A70872B00760183 /* libsqlite3.dylib */; };
+		8FF13D591A7100A500760183 /* pushdata.sql in Resources */ = {isa = PBXBuildFile; fileRef = 8FF13D581A7100A500760183 /* pushdata.sql */; };
+		8FF13D5C1A73254F00760183 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF13D5B1A73254F00760183 /* DBManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8FBA8ED51A763DEC00977D90 /* ScoresList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoresList.h; sourceTree = "<group>"; };
+		8FBA8ED61A763DEC00977D90 /* ScoresList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoresList.m; sourceTree = "<group>"; };
 		8FC327FE1A6DF0CE0086B81C /* PushGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PushGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FC328021A6DF0CE0086B81C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FC328031A6DF0CE0086B81C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +47,12 @@
 		8FC328171A6DF0CE0086B81C /* PushGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PushGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FC3281C1A6DF0CE0086B81C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FC3281D1A6DF0CE0086B81C /* PushGameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushGameTests.m; sourceTree = "<group>"; };
+		8FF13D4C1A70778300760183 /* Resultados.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Resultados.h; path = ../Resultados.h; sourceTree = "<group>"; };
+		8FF13D4D1A70778300760183 /* Resultados.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Resultados.m; path = ../Resultados.m; sourceTree = "<group>"; };
+		8FF13D4F1A70872B00760183 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		8FF13D581A7100A500760183 /* pushdata.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = pushdata.sql; sourceTree = "<group>"; };
+		8FF13D5A1A73254F00760183 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		8FF13D5B1A73254F00760183 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FF13D501A70872B00760183 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,9 +74,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8FBA8ED31A763D9400977D90 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				8FF13D5A1A73254F00760183 /* DBManager.h */,
+				8FF13D5B1A73254F00760183 /* DBManager.m */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
+		8FBA8ED41A763DA500977D90 /* Customize */ = {
+			isa = PBXGroup;
+			children = (
+				8FBA8ED51A763DEC00977D90 /* ScoresList.h */,
+				8FBA8ED61A763DEC00977D90 /* ScoresList.m */,
+			);
+			name = Customize;
+			sourceTree = "<group>";
+		};
 		8FC327F51A6DF0CE0086B81C = {
 			isa = PBXGroup;
 			children = (
+				8FBA8ED41A763DA500977D90 /* Customize */,
+				8FBA8ED31A763D9400977D90 /* Database */,
+				8FF13D581A7100A500760183 /* pushdata.sql */,
+				8FF13D4F1A70872B00760183 /* libsqlite3.dylib */,
 				8FC328001A6DF0CE0086B81C /* PushGame */,
 				8FC3281A1A6DF0CE0086B81C /* PushGameTests */,
 				8FC327FF1A6DF0CE0086B81C /* Products */,
@@ -81,12 +117,14 @@
 		8FC328001A6DF0CE0086B81C /* PushGame */ = {
 			isa = PBXGroup;
 			children = (
-				8FC328051A6DF0CE0086B81C /* AppDelegate.h */,
-				8FC328061A6DF0CE0086B81C /* AppDelegate.m */,
+				8FF13D4C1A70778300760183 /* Resultados.h */,
+				8FF13D4D1A70778300760183 /* Resultados.m */,
 				8FC328081A6DF0CE0086B81C /* Home.h */,
 				8FC328091A6DF0CE0086B81C /* Home.m */,
 				8FC3280B1A6DF0CE0086B81C /* Main.storyboard */,
 				8FC3280E1A6DF0CE0086B81C /* Images.xcassets */,
+				8FC328051A6DF0CE0086B81C /* AppDelegate.h */,
+				8FC328061A6DF0CE0086B81C /* AppDelegate.m */,
 				8FC328101A6DF0CE0086B81C /* LaunchScreen.xib */,
 				8FC328011A6DF0CE0086B81C /* Supporting Files */,
 			);
@@ -199,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FF13D591A7100A500760183 /* pushdata.sql in Resources */,
 				8FC3280D1A6DF0CE0086B81C /* Main.storyboard in Resources */,
 				8FC328121A6DF0CE0086B81C /* LaunchScreen.xib in Resources */,
 				8FC3280F1A6DF0CE0086B81C /* Images.xcassets in Resources */,
@@ -219,9 +258,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FBA8ED71A763DEC00977D90 /* ScoresList.m in Sources */,
 				8FC3280A1A6DF0CE0086B81C /* Home.m in Sources */,
+				8FF13D4E1A70778300760183 /* Resultados.m in Sources */,
 				8FC328071A6DF0CE0086B81C /* AppDelegate.m in Sources */,
 				8FC328041A6DF0CE0086B81C /* main.m in Sources */,
+				8FF13D5C1A73254F00760183 /* DBManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +456,7 @@
 				8FC328231A6DF0CE0086B81C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8FC328241A6DF0CE0086B81C /* Build configuration list for PBXNativeTarget "PushGameTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +465,7 @@
 				8FC328261A6DF0CE0086B81C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
