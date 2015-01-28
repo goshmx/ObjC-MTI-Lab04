@@ -50,8 +50,8 @@ int total;
     int lastRowNumber = (int)[self.tblMain numberOfRowsInSection:0] - (total-pos);
     NSIndexPath* ip = [NSIndexPath indexPathForRow:lastRowNumber inSection:0];
     [self.tblMain scrollToRowAtIndexPath:ip atScrollPosition:UITableViewScrollPositionTop animated:YES];
-    UITableViewCell *celda = [self.tblMain cellForRowAtIndexPath:ip];
-    celda.backgroundColor = [UIColor colorWithRed:246.0/255.0 green:95.0/255.0 blue:22.0/255.0 alpha:1.0];
+    //UITableViewCell *celda = [self.tblMain cellForRowAtIndexPath:ip];
+    //celda.backgroundColor = [UIColor colorWithRed:246.0/255.0 green:95.0/255.0 blue:22.0/255.0 alpha:1.0];
     [myTimer invalidate];
     myTimer = nil;
 }
